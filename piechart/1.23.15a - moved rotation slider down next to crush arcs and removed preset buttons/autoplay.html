@@ -76,6 +76,7 @@
 
     <!-- JL 5/29 -->
     <script src="./d3.min.js" charset="utf-8"></script>
+    <script src="jquery-1.7.1.min.js"></script>
 
 
     <script type="text/javascript" src="/public/cdn/analysisreportassets/msr-reports/msrreportscripts.min.js"></script>
@@ -1448,6 +1449,7 @@
                 var buttontranslatepos = xpos;
                 var buttonxseparation = 80;
                 var buttoncount = 1;
+                buttonlist = [];
                 //--------------------------------------------------
                 // preset buttons
                 //--------------------------------------------------
@@ -1470,40 +1472,40 @@
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
+                button.execute = function(){
+                    d_radius_inner = -20;
+                    d_radius_outer = -80;
+                    scale_start = 1.5;
+                    scale_end = 1.0;
+                    rotation_start = 0;
+                    rotation_end = 0;
+                    opacity_start = 0.7;
+                    opacity_end = 1;
+                    delay_radius = 0;
+                    duration_radius = 600;
+                    delay_transform = 50;
+                    duration_transform = 500;
+                    crush_arcs = 1;
+                    sliders.radius_inner.setsliderfromval(d_radius_inner);
+                    sliders.radius_outer.setsliderfromval(d_radius_outer);
+                    sliders.scale_start.setsliderfromval(scale_start);
+                    sliders.scale_end.setsliderfromval(scale_end);
+                    sliders.rotation_start.setsliderfromval(rotation_start);
+                    sliders.opacity_start.setsliderfromval(opacity_start);
+                    sliders.opacity_end.setsliderfromval(opacity_end);
+                    sliders.delay_radius.setsliderfromval(delay_radius);
+                    sliders.duration_radius.setsliderfromval(duration_radius);
+                    sliders.delay_transform.setsliderfromval(delay_transform);
+                    sliders.duration_transform.setsliderfromval(duration_transform);
+                    sliders.crush_arcs.setsliderfromval(crush_arcs);
+                    piechart.display_dynamic_2();
+                }
                 button
                     .on("click", function() {
-                        console.log("preset_1");
-
-                        d_radius_inner = -20;
-                        d_radius_outer = -80;
-                        scale_start = 1.5;
-                        scale_end = 1.0;
-                        rotation_start = 0;
-                        rotation_end = 0;
-                        opacity_start = 0.7;
-                        opacity_end = 1;
-                        delay_radius = 0;
-                        duration_radius = 600;
-                        delay_transform = 50;
-                        duration_transform = 500;
-                        crush_arcs = 1;
-
-                        sliders.radius_inner.setsliderfromval(d_radius_inner);
-                        sliders.radius_outer.setsliderfromval(d_radius_outer);
-                        sliders.scale_start.setsliderfromval(scale_start);
-                        sliders.scale_end.setsliderfromval(scale_end);
-                        sliders.rotation_start.setsliderfromval(rotation_start);
-                        sliders.opacity_start.setsliderfromval(opacity_start);
-                        sliders.opacity_end.setsliderfromval(opacity_end);
-                        sliders.delay_radius.setsliderfromval(delay_radius);
-                        sliders.duration_radius.setsliderfromval(duration_radius);
-                        sliders.delay_transform.setsliderfromval(delay_transform);
-                        sliders.duration_transform.setsliderfromval(duration_transform);
-                        sliders.crush_arcs.setsliderfromval(crush_arcs);
-                        piechart.display_dynamic_2();
-                        
+                        button.execute();
                         d3.event.stopPropagation();
                     });
+                buttonlist.push(button);
                 //--------------------------------------------------
                 buttontranslatepos += buttonxseparation;
                 buttoncount++;
@@ -1526,40 +1528,40 @@
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
+                button.execute = function(){
+                    d_radius_inner = -32.21;
+                    d_radius_outer = 104.71;
+                    scale_start = 0.1;
+                    scale_end = 0.98;
+                    rotation_start = -10;
+                    rotation_end = 0;
+                    opacity_start = 0.43;
+                    opacity_end = 1;
+                    delay_radius = 0;
+                    duration_radius = 717.65;
+                    delay_transform = 0;
+                    duration_transform = 547.06;
+                    crush_arcs = 0.49;
+                    sliders.radius_inner.setsliderfromval(d_radius_inner);
+                    sliders.radius_outer.setsliderfromval(d_radius_outer);
+                    sliders.scale_start.setsliderfromval(scale_start);
+                    sliders.scale_end.setsliderfromval(scale_end);
+                    sliders.rotation_start.setsliderfromval(rotation_start);
+                    sliders.opacity_start.setsliderfromval(opacity_start);
+                    sliders.opacity_end.setsliderfromval(opacity_end);
+                    sliders.delay_radius.setsliderfromval(delay_radius);
+                    sliders.duration_radius.setsliderfromval(duration_radius);
+                    sliders.delay_transform.setsliderfromval(delay_transform);
+                    sliders.duration_transform.setsliderfromval(duration_transform);
+                    sliders.crush_arcs.setsliderfromval(crush_arcs);
+                    piechart.display_dynamic_2();
+                }
                 button
                     .on("click", function() {
-                        console.log("preset_2");
-
-                        d_radius_inner = -32.21;
-                        d_radius_outer = 104.71;
-                        scale_start = 0.1;
-                        scale_end = 0.98;
-                        rotation_start = -10;
-                        rotation_end = 0;
-                        opacity_start = 0.43;
-                        opacity_end = 1;
-                        delay_radius = 0;
-                        duration_radius = 717.65;
-                        delay_transform = 0;
-                        duration_transform = 547.06;
-                        crush_arcs = 0.49;
-
-                        sliders.radius_inner.setsliderfromval(d_radius_inner);
-                        sliders.radius_outer.setsliderfromval(d_radius_outer);
-                        sliders.scale_start.setsliderfromval(scale_start);
-                        sliders.scale_end.setsliderfromval(scale_end);
-                        sliders.rotation_start.setsliderfromval(rotation_start);
-                        sliders.opacity_start.setsliderfromval(opacity_start);
-                        sliders.opacity_end.setsliderfromval(opacity_end);
-                        sliders.delay_radius.setsliderfromval(delay_radius);
-                        sliders.duration_radius.setsliderfromval(duration_radius);
-                        sliders.delay_transform.setsliderfromval(delay_transform);
-                        sliders.duration_transform.setsliderfromval(duration_transform);
-                        sliders.crush_arcs.setsliderfromval(crush_arcs);
-                        piechart.display_dynamic_2();
-                        
+                        button.execute();
                         d3.event.stopPropagation();
                     });
+                buttonlist.push(button);
                 //--------------------------------------------------
                 buttontranslatepos += buttonxseparation;
                 buttoncount++;
@@ -1582,41 +1584,40 @@
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
+                button.execute = function(){
+                    d_radius_inner = -60;
+                    d_radius_outer = -62.35;
+                    rotation_start = -9.85;
+                    scale_start = .94;
+                    scale_end = 1;
+                    opacity_start = 0;
+                    opacity_end = 1;
+                    delay_radius = 0;
+                    duration_radius = 664.71;
+                    delay_transform = 0;
+                    duration_transform = 0;
+                    crush_arcs = 0.41;
+                    rotation_end = 0;
+                    sliders.radius_inner.setsliderfromval(d_radius_inner);
+                    sliders.radius_outer.setsliderfromval(d_radius_outer);
+                    sliders.scale_start.setsliderfromval(scale_start);
+                    sliders.scale_end.setsliderfromval(scale_end);
+                    sliders.rotation_start.setsliderfromval(rotation_start);
+                    sliders.opacity_start.setsliderfromval(opacity_start);
+                    sliders.opacity_end.setsliderfromval(opacity_end);
+                    sliders.delay_radius.setsliderfromval(delay_radius);
+                    sliders.duration_radius.setsliderfromval(duration_radius);
+                    sliders.delay_transform.setsliderfromval(delay_transform);
+                    sliders.duration_transform.setsliderfromval(duration_transform);
+                    sliders.crush_arcs.setsliderfromval(crush_arcs);
+                    piechart.display_dynamic_2();
+                }
                 button
                     .on("click", function() {
-
-                        d_radius_inner = -60;
-                        d_radius_outer = -62.35;
-                        rotation_start = -9.85;
-                        scale_start = .94;
-                        scale_end = 1;
-                        opacity_start = 0;
-                        opacity_end = 1;
-                        delay_radius = 0;
-                        duration_radius = 664.71;
-                        delay_transform = 0;
-                        duration_transform = 0;
-                        crush_arcs = 0.41;
-                        
-                        
-                        rotation_end = 0;
-
-                        sliders.radius_inner.setsliderfromval(d_radius_inner);
-                        sliders.radius_outer.setsliderfromval(d_radius_outer);
-                        sliders.scale_start.setsliderfromval(scale_start);
-                        sliders.scale_end.setsliderfromval(scale_end);
-                        sliders.rotation_start.setsliderfromval(rotation_start);
-                        sliders.opacity_start.setsliderfromval(opacity_start);
-                        sliders.opacity_end.setsliderfromval(opacity_end);
-                        sliders.delay_radius.setsliderfromval(delay_radius);
-                        sliders.duration_radius.setsliderfromval(duration_radius);
-                        sliders.delay_transform.setsliderfromval(delay_transform);
-                        sliders.duration_transform.setsliderfromval(duration_transform);
-                        sliders.crush_arcs.setsliderfromval(crush_arcs);
-                        piechart.display_dynamic_2();
-                        
+                        button.execute();
                         d3.event.stopPropagation();
                     });
+                buttonlist.push(button);
                 //--------------------------------------------------
                 buttontranslatepos += buttonxseparation;
                 buttoncount++;
@@ -1639,41 +1640,40 @@
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
+                button.execute = function(){
+                    d_radius_inner = -20.00;
+                    d_radius_outer = 64.71;
+                    rotation_start = 10.00;
+                    scale_start = 0.63;
+                    scale_end = 1;
+                    opacity_start = 0.04;
+                    opacity_end = 1;
+                    delay_radius = 0;
+                    duration_radius = 600.00;
+                    delay_transform = 50.00;
+                    duration_transform = 500.00;
+                    crush_arcs = 1.00;
+                    rotation_end = 0;
+                    sliders.radius_inner.setsliderfromval(d_radius_inner);
+                    sliders.radius_outer.setsliderfromval(d_radius_outer);
+                    sliders.scale_start.setsliderfromval(scale_start);
+                    sliders.scale_end.setsliderfromval(scale_end);
+                    sliders.rotation_start.setsliderfromval(rotation_start);
+                    sliders.opacity_start.setsliderfromval(opacity_start);
+                    sliders.opacity_end.setsliderfromval(opacity_end);
+                    sliders.delay_radius.setsliderfromval(delay_radius);
+                    sliders.duration_radius.setsliderfromval(duration_radius);
+                    sliders.delay_transform.setsliderfromval(delay_transform);
+                    sliders.duration_transform.setsliderfromval(duration_transform);
+                    sliders.crush_arcs.setsliderfromval(crush_arcs);
+                    piechart.display_dynamic_2();
+                }
                 button
                     .on("click", function() {
-
-                        d_radius_inner = -20.00;
-                        d_radius_outer = 64.71;
-                        rotation_start = 10.00;
-                        scale_start = 0.63;
-                        scale_end = 1;
-                        opacity_start = 0.04;
-                        opacity_end = 1;
-                        delay_radius = 0;
-                        duration_radius = 600.00;
-                        delay_transform = 50.00;
-                        duration_transform = 500.00;
-                        crush_arcs = 1.00;
-
-                                                
-                        rotation_end = 0;
-
-                        sliders.radius_inner.setsliderfromval(d_radius_inner);
-                        sliders.radius_outer.setsliderfromval(d_radius_outer);
-                        sliders.scale_start.setsliderfromval(scale_start);
-                        sliders.scale_end.setsliderfromval(scale_end);
-                        sliders.rotation_start.setsliderfromval(rotation_start);
-                        sliders.opacity_start.setsliderfromval(opacity_start);
-                        sliders.opacity_end.setsliderfromval(opacity_end);
-                        sliders.delay_radius.setsliderfromval(delay_radius);
-                        sliders.duration_radius.setsliderfromval(duration_radius);
-                        sliders.delay_transform.setsliderfromval(delay_transform);
-                        sliders.duration_transform.setsliderfromval(duration_transform);
-                        sliders.crush_arcs.setsliderfromval(crush_arcs);
-                        piechart.display_dynamic_2();
-                        
+                        button.execute();
                         d3.event.stopPropagation();
                     });
+                buttonlist.push(button);
                 //--------------------------------------------------
                 buttontranslatepos += buttonxseparation;
                 buttoncount++;
@@ -1696,42 +1696,44 @@
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
+                button.execute = function(){
+                    d_radius_inner = -32.21;
+                    d_radius_outer = 104.71;
+                    rotation_start = -10.00;
+                    scale_start = 0.10;
+                    scale_end = 1;
+                    opacity_start = 0.10;
+                    opacity_end = 1;
+                    delay_radius = 0;
+                    duration_radius = 0.00;
+                    delay_transform = 0;
+                    duration_transform = 694.12;
+                    crush_arcs = 0;
+                    rotation_end = 0;
+                    sliders.radius_inner.setsliderfromval(d_radius_inner);
+                    sliders.radius_outer.setsliderfromval(d_radius_outer);
+                    sliders.scale_start.setsliderfromval(scale_start);
+                    sliders.scale_end.setsliderfromval(scale_end);
+                    sliders.rotation_start.setsliderfromval(rotation_start);
+                    sliders.opacity_start.setsliderfromval(opacity_start);
+                    sliders.opacity_end.setsliderfromval(opacity_end);
+                    sliders.delay_radius.setsliderfromval(delay_radius);
+                    sliders.duration_radius.setsliderfromval(duration_radius);
+                    sliders.delay_transform.setsliderfromval(delay_transform);
+                    sliders.duration_transform.setsliderfromval(duration_transform);
+                    sliders.crush_arcs.setsliderfromval(crush_arcs);
+                    piechart.display_dynamic_2();
+                }
                 button
                     .on("click", function() {
-
-                        d_radius_inner = -32.21;
-                        d_radius_outer = 104.71;
-                        rotation_start = -10.00;
-                        scale_start = 0.10;
-                        scale_end = 1;
-                        opacity_start = 0.10;
-                        opacity_end = 1;
-                        delay_radius = 0;
-                        duration_radius = 0.00;
-                        delay_transform = 0;
-                        duration_transform = 694.12;
-                        crush_arcs = 0;
-
-                                                
-                        rotation_end = 0;
-
-                        sliders.radius_inner.setsliderfromval(d_radius_inner);
-                        sliders.radius_outer.setsliderfromval(d_radius_outer);
-                        sliders.scale_start.setsliderfromval(scale_start);
-                        sliders.scale_end.setsliderfromval(scale_end);
-                        sliders.rotation_start.setsliderfromval(rotation_start);
-                        sliders.opacity_start.setsliderfromval(opacity_start);
-                        sliders.opacity_end.setsliderfromval(opacity_end);
-                        sliders.delay_radius.setsliderfromval(delay_radius);
-                        sliders.duration_radius.setsliderfromval(duration_radius);
-                        sliders.delay_transform.setsliderfromval(delay_transform);
-                        sliders.duration_transform.setsliderfromval(duration_transform);
-                        sliders.crush_arcs.setsliderfromval(crush_arcs);
-                        piechart.display_dynamic_2();
-                        
+                        button.execute();
                         d3.event.stopPropagation();
                     });
+                buttonlist.push(button);
             }
+
+        }
+        function triggerpreset1(){
 
         }
         //--------------------------------------------------
@@ -1748,6 +1750,15 @@
         var file_url = "{{ hitsByCategoryFile.href }}" + "?redirect=proxy";
         render_smallRNA_layout("report_container");
         add_testcontrols("report_container");
+        $("#testcontrols_container").css("display", "none");
+        var currentbutton = -1;
+        playnextpreset();
+        function playnextpreset(){
+            currentbutton++;
+            if(currentbutton >= buttonlist.length) currentbutton = 0;
+            buttonlist[currentbutton].execute();
+            setTimeout(playnextpreset, 2000);
+        }
     </script>
 </body>
 </html>

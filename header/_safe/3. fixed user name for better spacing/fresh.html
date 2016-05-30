@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://basespace.illumina.com/dashboard -->
+<html lang="en" class="no-js noie k-webkit k-webkit50"><!--<![endif]-->
+<head>
+
+<link rel="shortcut icon" href="https://basespace.illumina.com/public/images/favicon.ico?v=4.6.0.1509" type="image/x-icon">
+<link rel="icon" href="https://basespace.illumina.com/public/images/favicon.ico?v=4.6.0.1509" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://basespace.illumina.com/public/images/icon.png?v=4.6.0.1509">
+<link rel="stylesheet" type="text/css" href="./Dashboard - BaseSpace Sequence Hub_files/bootstrap.min.css">
+<link href="./Dashboard - BaseSpace Sequence Hub_files/illumina.min.css" rel="stylesheet">
+<link href="./Dashboard - BaseSpace Sequence Hub_files/basespace.charts.min.css" rel="stylesheet">
+<link href="./Dashboard - BaseSpace Sequence Hub_files/styles.common.min.css" rel="stylesheet">
+<link href="./Dashboard - BaseSpace Sequence Hub_files/styles.dashboard.min.css" rel="stylesheet">
+
+
+<script type="application/javascript" async="" defer="" src="./Dashboard - BaseSpace Sequence Hub_files/track.js"></script><script type="text/javascript" async="" src="./Dashboard - BaseSpace Sequence Hub_files/HxoI0INZiF9WkeoOxd8IAg.js"></script><script async="" src="./Dashboard - BaseSpace Sequence Hub_files/ga.js"></script><script type="text/javascript" src="./Dashboard - BaseSpace Sequence Hub_files/jquery.min.js"></script>
+<script src="./Dashboard - BaseSpace Sequence Hub_files/bundles.angular.min.js" type="text/javascript"></script>
+<script src="./Dashboard - BaseSpace Sequence Hub_files/bundles.tang-external-dependencies.min.js" type="text/javascript"></script>
+<script src="./Dashboard - BaseSpace Sequence Hub_files/bs.tang.common.min.js" type="text/javascript"></script>
+<script src="./Dashboard - BaseSpace Sequence Hub_files/bundles.spa-hotness.min.js" type="text/javascript"></script>
+<script src="./Dashboard - BaseSpace Sequence Hub_files/bs.tang.dashboard.min.js" type="text/javascript"></script>
+
+
+
+<!-- JL -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+	/* it's stalling before finally disappearing behind active marker when page is fully loaded, so hide it until it's in position */
+	#navbar-menu-item-marker {
+		/*
+		left: 191.812px !important;
+		width: 107px !important;
+		*/
+		visibility: hidden;
+	}
+</style>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<!-- JL -->
+<!--
+<bs-global-header class="ng-isolate-scope">
+-->
+<bs-global-header class="ng-isolate-scope" style="min-height:0px;">
+
+
+<!-- ======================================= Desktop Navbar ======================================= -->
+<div class="navbar-desktop">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand">BaseSpace</a>
+
+
+
+
+	<!-- JL -->
+	<!--
+	<div class="product-lens sh">
+		<div class="el-1"></div>
+		<div class="el-2"></div>
+		<div class="el-3"></div>
+		<div class="el-4"></div>
+		<div class="el-5"></div>
+		<div class="el-6"></div>
+	</div>
+	<ul class="nav navbar-nav product-dropdown">
+		<li class="dropdown">
+			<a class="dropdown-toggle product-button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="product-name"><span ng-bind-html="currentSite.title" class="ng-binding">Sequence<br> Hub</span><span class="fa fa-angle-down fa-lg"></span></span></a>
+			<ul class="dropdown-menu dropdown-menu-left product-links">
+				
+				<!-- ngRepeat: site in dropdownSites - ->
+				
+				<li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+					<a ng-href="https://www.nextbio.com/b/nextbio.nb" href="https://www.nextbio.com/b/nextbio.nb">
+						<div class="product-lens ce">
+							<div class="el-1">
+							</div>
+							<div class="el-2">
+							</div>
+							<div class="el-3"></div>
+							<div class="el-4"></div>
+							<div class="el-5"></div>
+							<div class="el-6"></div>
+						</div>
+						<span class="product-name ce" ng-bind-html="site.title">Correlation<br> Engine</span>
+					</a>
+				</li>
+				
+				<!-- end ngRepeat: site in dropdownSites - ->
+				
+				<li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+					<a ng-href="http://designstudio.illumina.com/" href="http://designstudio.illumina.com/">
+						<div class="product-lens ad">
+							<div class="el-1"></div>
+							<div class="el-2"></div>
+							<div class="el-3"></div>
+							<div class="el-4"></div>
+							<div class="el-5"></div>
+							<div class="el-6"></div>
+						</div>
+						<span class="product-name ad" ng-bind-html="site.title">Design<br> Studio</span>
+					</a>
+				</li>
+				
+				<!-- end ngRepeat: site in dropdownSites - ->
+
+			</ul>
+		</li>
+	</ul>
+	-->
+	<style>
+		.JL-spacer {
+			background-color: rgba(0,0,0, .2);
+			display: inline-block;
+			width: 1px;
+			height: 29px;
+			margin-left: 17px;
+			margin-right: 20px;
+			top: 19px;
+			position: relative;
+		}
+		.navbar.navbar-default {
+			top: -9px;
+		}
+		.navbar-desktop {
+			height: 20px;
+		}
+		.navbar-brand {
+		    top: 6px;
+    		position: relative;
+		}
+		.nav.navbar-nav.navbar-right>li.navbar-ilmn-logo>a {
+			border-left: none;
+			padding-left: 0;
+		}
+		.JL-spacer2 {
+			background-color: rgba(0,0,0, .2);
+			display: inline-block;
+			width: 1px;
+			height: 29px;
+			margin-left: 5px;
+			margin-right: 18px;
+			top: 19px;
+			position: relative;
+		}
+		.nav.navbar-nav.navbar-right>li.account-dropdown>a {
+			min-width: 120px;
+		}
+		.container-fluid {
+    		padding-right: 17px;
+    	}
+
+    	.nav.navbar-nav>li.active>a {
+    		/*
+    	    background-color: #fff;
+    	    color: #444;
+    	    font-weight: bold;
+    	    padding-bottom: 9px;
+    	    -webkit-box-shadow: 0 5px 0 0 #328ed1;
+    	    -moz-box-shadow: 0 5px 0 0 #328ed1;
+    	    box-shadow: 0 5px 0 0 #328ed1;
+    	    top: -1px;
+    	    */
+	        padding-bottom: 10px;
+    	}
+    	.nav.navbar-nav>li>a {
+    	    padding-top: 29px;
+    	}    	
+
+	</style>
+	<div class="JL-spacer"></div>
+
+
+
+</div>
+<!-- /.navbar-header -->
+<!-- Menu Items -->
+<div class="collapse navbar-collapse" id="navbar-menu-items">
+<!-- Main Navigation -->
+<ul class="nav navbar-nav navbar-menu-ul" id="navbar-menu-list">
+<!-- ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-1" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope active">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/dashboard" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/dashboard">Dashboard</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-2" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/lab" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/lab">Prep</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-3" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/runs" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/runs">Runs</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-4" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/projects" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/projects">Projects</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-5" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/apps" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/apps">Apps</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-6" ng-mouseover="moveMarker($event)" data-ng-mouseleave="slideToActive()" ng-class="{ active : isMenuButtonActive(li.id), dropdown: globalHeaderSecondaryListItems.hasOwnProperty(li.id) }" ng-switch="secondaryMenuData.hasOwnProperty(li.id)" class="ng-scope">
+<!-- non dropdown menu content -->
+<!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/datacentral" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/datacentral">Public Data</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- drop down menu content -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+<!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id -->
+<li id="navbar-menu-item-marker" ng-style="markerStyle" class="hidden-xs marker" style="opacity: 0.35; left: 348px; width: 107px;"></li>
+</ul>
+
+
+
+
+
+
+<!-- JL -->
+<script>
+$(document).ready(function(){
+	// set initial position to match active
+	$("#navbar-menu-item-marker").css("left", $(".active").position().left+"px");
+	$("#navbar-menu-item-marker").css("width", $(".active").width()+"px");
+	// create mouseover for each
+	$("#navbar-menu-list").children("li").each(function(){
+		var e = $(this);
+		e.mouseover(function(){
+			$("#navbar-menu-item-marker").css("visibility", "visible");
+			$("#navbar-menu-item-marker").css("left", e.position().left+"px");
+			$("#navbar-menu-item-marker").css("width", e.width()+"px");
+		});
+		e.mouseleave(function(){
+			$("#navbar-menu-item-marker").css("left", $(".active").position().left+"px");
+			$("#navbar-menu-item-marker").css("width", $(".active").width()+"px");
+		});
+	});
+});
+</script>
+
+
+
+
+
+
+
+<!-- Utility Bar -->
+<ul class="nav navbar-nav navbar-right navbar-utility-bar-ul">
+<!-- ngIf: !disableSearch --><li ng-if="!disableSearch" bs-search-dialog-trigger="" class="ng-scope ng-isolate-scope">
+<a href="https://basespace.illumina.com/"><span class="fa fa-search"></span></a>
+</li><!-- end ngIf: !disableSearch -->
+<li>
+<a href="https://help.basespace.illumina.com/" target="_blank"><span class="fa fa-question fa-lg"></span></a>
+</li>
+<!-- ngIf: !disableTrash --><li ng-if="!disableTrash" ng-class="{ &#39;red-circle&#39; : trashCount &gt; 0 }" class="ng-scope">
+<a ng-href="/settings/trash" target="_self" href="https://basespace.illumina.com/settings/trash"><span class="fa fa-trash-o fa-lg"></span></a>
+</li><!-- end ngIf: !disableTrash -->
+<li class="navbar-right-account account-dropdown dropdown">
+<a href="https://basespace.illumina.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<span class="fa fa-user fa-lg fa-fw pull-left"></span>
+<span class="navbar-username ng-binding">Andrew Loftus</span>
+<span class="fa fa-angle-down pull-right"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left">
+<!-- ngIf: !user -->
+<li><span class="dropdown-user-name ng-binding">Andrew Loftus</span></li>
+<li><span class="dropdown-email ng-binding">aloftus@gmail.com</span></li>
+<!-- ngIf: user.StoreInfo --><li ng-if="user.StoreInfo" class="ng-scope"><a ng-href="https://store.basespace.illumina.com/myAccount/wallet" href="https://store.basespace.illumina.com/myAccount/wallet"><span class="dropdown-icredits ng-binding">iCredits: 0</span></a></li><!-- end ngIf: user.StoreInfo -->
+
+
+
+<!-- JL -->
+<!-- <li><a href="https://my.illumina.com/" target="_self">MyIllumina Dashboard</a></li> -->
+<li><a href="https://my.illumina.com/" target="_self">My Dashboard</a></li>
+
+
+
+<!-- ngIf: organizations === null || organizations.length > 0 -->
+<!-- ngIf: organizations === null -->
+<!-- ngRepeat: value in organizations track by value.Id -->
+<!-- ngIf: organizations === null || organizations.length > 0 -->
+<li><a ng-href="/settings" target="_self" href="https://basespace.illumina.com/settings">Settings</a></li>
+<li><a ng-href="/agreements/toc" target="_self" href="https://basespace.illumina.com/agreements/toc">Terms</a></li>
+<li><a href="http://blog.basespace.illumina.com/" target="_blank">Blog</a></li>
+<li><a ng-href="/auth/logout" target="_self" href="https://basespace.illumina.com/auth/logout">Sign Out</a></li>
+</ul>
+</li>
+<!-- Illumina Logo -->
+
+
+
+
+<!-- JL -->
+<li class="JL-spacer2"></li>
+
+
+
+
+<li class="navbar-ilmn-logo">
+<a href="http://www.illumina.com/"><img width="84" height="17" ng-src="/public/cdn/basespace/images/ILLUMINA_LOGO_small_new.png" src="./Dashboard - BaseSpace Sequence Hub_files/ILLUMINA_LOGO_small_new.png"></a>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>    </div> <!-- /.show-full -->    <!-- ======================================= Tablet Navbar ======================================= -->
+<div class="navbar-tablet">
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+<div class="dropdown dropdown-accordion dropdown-responsive-menu">
+<button class="btn btn-responsive-menu pull-left" data-toggle="dropdown">
+<span class="fa fa-bars"></span> Menu
+</button>
+<div class="product-lens sh">
+<div class="el-1"></div>
+<div class="el-2"></div>
+<div class="el-3"></div>
+<div class="el-4"></div>
+<div class="el-5"></div>
+<div class="el-6"></div>
+</div>
+<ul class="dropdown-menu">
+<!-- ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-1" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope active">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/dashboard" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/dashboard">Dashboard</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-2" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/lab" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/lab">Prep</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-3" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/runs" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/runs">Runs</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-4" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/projects" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/projects">Projects</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-5" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/apps" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/apps">Apps</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-6" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/datacentral" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/datacentral">Public Data</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id -->
+<li class="responsive-app-chooser">
+<div class="panel">
+<div class="panel-heading">
+    <a class="" href="https://basespace.illumina.com/#app-chooser-menu-tablet" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" ng-click="toggleSubMenu($event, &#39;app-switcher&#39;)">
+    BaseSpace<span class="fa fa-caret-down pull-right"></span>
+    </a>
+</div>
+<div id="app-chooser-menu-tablet" class="panel-collapse collapse" aria-expanded="true" ng-class="{ &#39;collapse&#39; : !subMenuState[&#39;app-switcher&#39;] }">
+<div class="panel-body">
+    <ul class="responsive-app-chooser-dropdown product-links">
+<!-- ngRepeat: site in dropdownSites --><li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+<a ng-href="https://www.nextbio.com/b/nextbio.nb" href="https://www.nextbio.com/b/nextbio.nb">
+<div class="product-lens ce">
+    <div class="el-1"></div>
+    <div class="el-2"></div>
+    <div class="el-3"></div>
+    <div class="el-4"></div>
+    <div class="el-5"></div>
+    <div class="el-6"></div>
+</div>
+<span class="product-name ac ng-binding" ng-bind-html="site.title">Correlation<br> Engine</span>
+</a>
+</li><!-- end ngRepeat: site in dropdownSites --><li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+<a ng-href="http://designstudio.illumina.com/" href="http://designstudio.illumina.com/">
+<div class="product-lens ad">
+    <div class="el-1"></div>
+    <div class="el-2"></div>
+    <div class="el-3"></div>
+    <div class="el-4"></div>
+    <div class="el-5"></div>
+    <div class="el-6"></div>
+</div>
+<span class="product-name ac ng-binding" ng-bind-html="site.title">Design<br> Studio</span>
+</a>
+</li><!-- end ngRepeat: site in dropdownSites -->
+    </ul>
+</div>
+</div>    </div></li>
+</ul>
+<span class="product-name">Sequence<br>Hub</span>    </div>
+    </div><!-- /.navbar-header -->
+<!-- Menu Items -->
+    <div class="collapse navbar-collapse">
+<!-- Utility Bar -->
+<ul class="nav navbar-nav navbar-right navbar-utility-bar-ul">
+<!-- ngIf: !disableSearch --><li ng-if="!disableSearch" bs-search-dialog-trigger="" class="ng-scope ng-isolate-scope"><a href="https://basespace.illumina.com/"><span class="fa fa-search"></span></a></li><!-- end ngIf: !disableSearch -->
+<li><a href="https://help.basespace.illumina.com/" target="_blank"><span class="fa fa-question fa-lg"></span></a></li>
+<!-- ngIf: !disableTrash --><li ng-if="!disableTrash" ng-class="{ &#39;red-circle&#39; : trashCount &gt; 0 }" class="ng-scope">
+<a ng-href="/settings/trash" target="_self" href="https://basespace.illumina.com/settings/trash"><span class="fa fa-trash-o fa-lg"></span></a>
+</li><!-- end ngIf: !disableTrash -->
+<li class="navbar-right-account account-dropdown dropdown">
+<a href="https://basespace.illumina.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="fa fa-user fa-lg fa-fw pull-left"></span>
+    <span class="navbar-username ng-binding">Jack Lovell</span>
+<span class="fa fa-angle-down pull-right"></span>
+  </a>
+<ul class="dropdown-menu dropdown-menu-left">
+    <!-- ngIf: !user -->
+    <li><span class="dropdown-user-name ng-binding">Jack Lovell</span></li>
+    <li><span class="dropdown-email ng-binding">jacklovell@gmail.com</span></li>
+    <!-- ngIf: user.StoreInfo --><li ng-if="user.StoreInfo" class="ng-scope"><span class="dropdown-icredits ng-binding">iCredits: 0</span></li><!-- end ngIf: user.StoreInfo -->
+    <li><a href="https://my.illumina.com/" target="_self">MyIllumina Dashboard</a></li>
+
+
+<!-- ngIf: organizations === null || organizations.length > 0 -->
+    <!-- ngIf: organizations === null -->
+    <!-- ngRepeat: value in organizations track by value.Id -->
+    <!-- ngIf: organizations === null || organizations.length > 0 -->
+
+
+<li><a ng-href="/settings" target="_self" href="https://basespace.illumina.com/settings">Settings</a></li>
+
+
+<li><a ng-href="/agreements/toc" target="_self" href="https://basespace.illumina.com/agreements/toc">Terms</a></li>
+    <li><a href="http://blog.basespace.illumina.com/" target="_blank">Blog</a></li>
+    <li><a ng-href="/auth/logout" target="_self" href="https://basespace.illumina.com/auth/logout">Sign Out</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</nav>
+</div> <!-- /.show-tablet -->    <!-- ======================================= Mobile Navbar ======================================= -->
+<div class="navbar-mobile">
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+<div class="dropdown dropdown-accordion dropdown-responsive-menu">
+<button class="btn btn-responsive-menu pull-left" data-toggle="dropdown">
+<span class="fa fa-bars"></span> Menu
+</button>
+<div class="product-lens sh">
+<div class="el-1"></div>
+<div class="el-2"></div>
+<div class="el-3"></div>
+<div class="el-4"></div>
+<div class="el-5"></div>
+<div class="el-6"></div>
+</div>
+<ul class="dropdown-menu">
+<!-- ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-1" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope active">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/dashboard" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/dashboard">Dashboard</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-2" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/lab" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/lab">Prep</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-3" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/runs" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/runs">Runs</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-4" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/projects" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/projects">Projects</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-5" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/apps" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/apps">Apps</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id --><li ng-repeat="li in globalHeaderListItems track by li.id" id="navbar-menu-item-6" ng-class="{ active : isMenuButtonActive(li.id) }" class="ng-scope">
+    <!-- non dropdown menu content -->
+    <!-- ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) --><a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/datacentral" target="_self" class="ng-binding ng-scope" href="https://basespace.illumina.com/datacentral">Public Data</a><!-- end ngIf: !globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+    <!-- drop down menu content -->
+    <!-- ngIf: globalHeaderSecondaryListItems.hasOwnProperty(li.id) -->
+</li><!-- end ngRepeat: li in globalHeaderListItems track by li.id -->
+<li class="responsive-app-chooser">
+<div class="panel">
+<div class="panel-heading">
+    <a class="" href="https://basespace.illumina.com/#app-chooser-menu-tablet" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" ng-click="toggleSubMenu($event, &#39;app-switcher&#39;)">
+    BaseSpace<span class="fa fa-caret-down pull-right"></span>
+    </a>
+</div>
+<div id="app-chooser-menu-tablet" class="panel-collapse collapse" aria-expanded="true" ng-class="{ &#39;collapse&#39; : !subMenuState[&#39;app-switcher&#39;] }">
+<div class="panel-body">
+    <ul class="responsive-app-chooser-dropdown product-links">
+<!-- ngRepeat: site in dropdownSites --><li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+<a ng-href="https://www.nextbio.com/b/nextbio.nb" href="https://www.nextbio.com/b/nextbio.nb">
+<div class="product-lens ce">
+    <div class="el-1"></div>
+    <div class="el-2"></div>
+    <div class="el-3"></div>
+    <div class="el-4"></div>
+    <div class="el-5"></div>
+    <div class="el-6"></div>
+</div>
+<span class="product-name ac ng-binding" ng-bind-html="site.title">Correlation<br> Engine</span>
+</a>
+</li><!-- end ngRepeat: site in dropdownSites --><li class="product-item ng-scope" ng-repeat="site in dropdownSites">
+<a ng-href="http://designstudio.illumina.com/" href="http://designstudio.illumina.com/">
+<div class="product-lens ad">
+    <div class="el-1"></div>
+    <div class="el-2"></div>
+    <div class="el-3"></div>
+    <div class="el-4"></div>
+    <div class="el-5"></div>
+    <div class="el-6"></div>
+</div>
+<span class="product-name ac ng-binding" ng-bind-html="site.title">Design<br> Studio</span>
+</a>
+</li><!-- end ngRepeat: site in dropdownSites -->
+    </ul>
+</div>
+</div>    </div></li>
+</ul>
+<span class="product-name">Sequence<br>Hub</span>    </div>
+   <!-- Collapsed Utility Bar -->
+<div class="dropdown dropdown-accordion dropdown-responsive-utility-bar">
+<button class="btn btn-responsive-utility-bar" data-toggle="dropdown">
+<span class="ellipsis"></span>
+</button>
+<ul class="dropdown-menu pull-right">
+<li class="mobile-show">
+    <div class="panel">
+
+<div class="panel-heading">
+
+<a class="collapsed ng-binding" href="https://basespace.illumina.com/" ng-click="toggleSubMenu($event, &#39;submenu_username&#39;)">
+<span class="fa fa-user"></span>Jack Lovell<span class="fa fa-angle-down pull-right"></span>
+</a>
+
+</div>
+
+<div id="mobile-utility-bar-submenu" ng-class="{ &#39;collapse&#39; : !subMenuState.submenu_username }" class="panel-collapse bs-nav-mobile-user-menu collapse">
+
+<div class="panel-body">
+
+    <!-- User Menu -->
+
+    <ul class="responsive-utility-bar-dropdown">
+
+<!-- ngIf: user.StoreInfo --><li ng-if="user.StoreInfo" class="ng-scope"><span class="ng-binding">iCredits: 0</span></li><!-- end ngIf: user.StoreInfo -->
+
+<li><a href="https://my.illumina.com/" target="_self">MyIllumina<br> Dashboard</a></li>
+
+
+
+<!-- ngIf: organizations === null || organizations.length > 0 -->
+
+<!-- ngIf: organizations === null -->
+
+<!-- ngRepeat: value in organizations track by value.Id -->
+
+<!-- ngIf: organizations === null || organizations.length > 0 -->
+
+
+
+<li><a ng-href="/settings" target="_self" href="https://basespace.illumina.com/settings">Settings</a></li>
+
+<li><a ng-href="/agreements/toc" target="_self" href="https://basespace.illumina.com/agreements/toc">Terms</a></li>
+
+<li><a href="http://blog.basespace.illumina.com/" target="_blank">Blog</a></li>
+
+<li><a ng-href="/auth/logout" target="_self" href="https://basespace.illumina.com/auth/logout">Sign Out</a></li>
+
+    </ul>
+
+</div>
+
+</div>
+    </div>
+</li>
+
+<!-- ngIf: !disableTrash --><li ng-class="{ &#39;red-circle&#39; : trashCount &gt; 0 }" ng-if="!disableTrash" class="ng-scope">
+</li><!-- end ngIf: !disableTrash --><!-- ngIf: !disableTrash --><li ng-if="!disableTrash" ng-class="{ &#39;red-circle&#39; : trashCount &gt; 0 }" class="ng-scope">
+    <a ng-href="/settings/trash" target="_self" href="https://basespace.illumina.com/settings/trash"><span class="fa fa-trash-o fa-lg"></span> Trash</a>
+</li><!-- end ngIf: !disableTrash -->
+<li><a href="https://help.basespace.illumina.com/" target="_blank"><span class="fa fa-question fa-lg"></span> Help</a></li>
+<!-- ngIf: !disableSearch --><li ng-if="!disableSearch" bs-search-dialog-trigger="" class="ng-scope ng-isolate-scope"><a href="https://basespace.illumina.com/"><span class="fa fa-search"></span> Search</a></li><!-- end ngIf: !disableSearch -->
+</ul>
+</div>
+</div><!-- /.navbar-header -->
+</nav>
+</div> <!-- /.show-mobile --></bs-global-header>
+
+</body>
+</html>

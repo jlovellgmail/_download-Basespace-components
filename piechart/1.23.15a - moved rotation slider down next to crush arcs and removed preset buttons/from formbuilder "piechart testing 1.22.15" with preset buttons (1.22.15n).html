@@ -72,6 +72,12 @@
     <script type="text/javascript" src="/public/cdn/analysisreportassets/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="/public/cdn/analysisreportassets/d3.v3.min.js"></script>
     -->
+
+
+    <!-- JL 5/29 -->
+    <script src="./d3.min.js" charset="utf-8"></script>
+
+
     <script type="text/javascript" src="/public/cdn/analysisreportassets/msr-reports/msrreportscripts.min.js"></script>
 
 
@@ -485,7 +491,7 @@
                     .attr("id", "piechart_title_text_element")
                     .style("text-anchor", "start")
                     .style("font-size", "20px")
-                    .text("piechart intro test")
+                    //.text("piechart intro test")
                     ;
                 return title;
             }
@@ -784,7 +790,8 @@
                 var g_labels = 
                     g_graphics
                     .append("g")
-                    .attr("transform", "translate(" + label_group.dx + "," + label_group.dy + ")")
+                    //.attr("transform", "translate(" + label_group.dx + "," + label_group.dy + ")")
+                    .attr("transform", "translate(" + (label_group.dx+40) + "," + label_group.dy + ")")
                     .attr("class", "piechart-labels")
                     ;
                 // fade in labels
@@ -802,7 +809,7 @@
                     .attr("id", "label_item")
                     .attr("transform", function(d,i){ return "translate(0,"+ i*label_items_vertical_separation +")"; })
                     ;
-                var color_block_size = 17;
+                var color_block_size = 13;
                 var separation1 = 6;
                 var separation2 = 7;
                 var text_colors_flag = true;
@@ -815,6 +822,7 @@
                     .style("fill", function(d,i){
                         return text_colors_flag ? arc_colors(i) : text_color_default;
                     })
+                    .style("font-family", "consolas")
                     .attr("class", "piechart-label-value")
                     .text(function(d){
                         return format_label_percentage(d._percentage);
@@ -825,7 +833,7 @@
                     .append("rect")
                     .attr("width", color_block_size+"px")
                     .attr("height", color_block_size+"px")
-                    .attr("transform", "translate(0,"+(-color_block_size+4)+")")
+                    .attr("transform", "translate(0,"+(-color_block_size+2)+")")
                     .attr("fill", function(d,i){
                         return arc_colors(i);
                     })
@@ -835,7 +843,16 @@
                     .append("text")
                     .style("text-anchor", "start")
                     .attr("dx", (color_block_size + separation2)+"px")
+
+
+                    // 5/29
                     .style("font-weight", "bold")
+                    //.style("font-family", "sans-serif")
+                    .style("font-family", "consolas")
+                    .style("font-size", "15px")
+
+
+
                     .style("fill", function(d,i){
                         return text_colors_flag ? arc_colors(i) : text_color_default;
                     })
@@ -1428,10 +1445,15 @@
                 //--------------------------------------------------
                 //--------------------------------------------------
                 ypos += s.boundingrect.h + yseparation + 30;
+                var buttontranslatepos = xpos;
+                var buttonxseparation = 80;
+                var buttoncount = 1;
+                //--------------------------------------------------
+                // preset buttons
                 //--------------------------------------------------
                 var button = g_testcontrols_svg
                     .append("g")
-                    .attr("transform", "translate(" + xpos + "," + ypos + ")")
+                    .attr("transform", "translate(" + buttontranslatepos + "," + ypos + ")")
                     ;
                 button
                     .append("rect")
@@ -1444,7 +1466,7 @@
                     ;
                 button
                     .append("text")
-                    .text("preset 1")
+                    .text("preset " + buttoncount)
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
@@ -1483,9 +1505,11 @@
                         d3.event.stopPropagation();
                     });
                 //--------------------------------------------------
+                buttontranslatepos += buttonxseparation;
+                buttoncount++;
                 var button = g_testcontrols_svg
                     .append("g")
-                    .attr("transform", "translate(" + (xpos+80) + "," + ypos + ")")
+                    .attr("transform", "translate(" + buttontranslatepos + "," + ypos + ")")
                     ;
                 button
                     .append("rect")
@@ -1498,7 +1522,7 @@
                     ;
                 button
                     .append("text")
-                    .text("preset 2")
+                    .text("preset " + buttoncount)
                     .style("fill", "rgba(255,255,255, 1)")
                     .style("cursor", "pointer")
                     ;
@@ -1536,6 +1560,177 @@
                         
                         d3.event.stopPropagation();
                     });
+                //--------------------------------------------------
+                buttontranslatepos += buttonxseparation;
+                buttoncount++;
+                var button = g_testcontrols_svg
+                    .append("g")
+                    .attr("transform", "translate(" + buttontranslatepos + "," + ypos + ")")
+                    ;
+                button
+                    .append("rect")
+                    .attr("width", "60px")
+                    .attr("height", "30px")
+                    .attr("x", "-3px")
+                    .attr("y", "-15px")
+                    .attr("fill", "rgba(0,0,0, .3)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .append("text")
+                    .text("preset " + buttoncount)
+                    .style("fill", "rgba(255,255,255, 1)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .on("click", function() {
+
+                        d_radius_inner = -60;
+                        d_radius_outer = -62.35;
+                        rotation_start = -9.85;
+                        scale_start = .94;
+                        scale_end = 1;
+                        opacity_start = 0;
+                        opacity_end = 1;
+                        delay_radius = 0;
+                        duration_radius = 664.71;
+                        delay_transform = 0;
+                        duration_transform = 0;
+                        crush_arcs = 0.41;
+                        
+                        
+                        rotation_end = 0;
+
+                        sliders.radius_inner.setsliderfromval(d_radius_inner);
+                        sliders.radius_outer.setsliderfromval(d_radius_outer);
+                        sliders.scale_start.setsliderfromval(scale_start);
+                        sliders.scale_end.setsliderfromval(scale_end);
+                        sliders.rotation_start.setsliderfromval(rotation_start);
+                        sliders.opacity_start.setsliderfromval(opacity_start);
+                        sliders.opacity_end.setsliderfromval(opacity_end);
+                        sliders.delay_radius.setsliderfromval(delay_radius);
+                        sliders.duration_radius.setsliderfromval(duration_radius);
+                        sliders.delay_transform.setsliderfromval(delay_transform);
+                        sliders.duration_transform.setsliderfromval(duration_transform);
+                        sliders.crush_arcs.setsliderfromval(crush_arcs);
+                        piechart.display_dynamic_2();
+                        
+                        d3.event.stopPropagation();
+                    });
+                //--------------------------------------------------
+                buttontranslatepos += buttonxseparation;
+                buttoncount++;
+                var button = g_testcontrols_svg
+                    .append("g")
+                    .attr("transform", "translate(" + buttontranslatepos + "," + ypos + ")")
+                    ;
+                button
+                    .append("rect")
+                    .attr("width", "60px")
+                    .attr("height", "30px")
+                    .attr("x", "-3px")
+                    .attr("y", "-15px")
+                    .attr("fill", "rgba(0,0,0, .3)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .append("text")
+                    .text("preset " + buttoncount)
+                    .style("fill", "rgba(255,255,255, 1)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .on("click", function() {
+
+                        d_radius_inner = -20.00;
+                        d_radius_outer = 64.71;
+                        rotation_start = 10.00;
+                        scale_start = 0.63;
+                        scale_end = 1;
+                        opacity_start = 0.04;
+                        opacity_end = 1;
+                        delay_radius = 0;
+                        duration_radius = 600.00;
+                        delay_transform = 50.00;
+                        duration_transform = 500.00;
+                        crush_arcs = 1.00;
+
+                                                
+                        rotation_end = 0;
+
+                        sliders.radius_inner.setsliderfromval(d_radius_inner);
+                        sliders.radius_outer.setsliderfromval(d_radius_outer);
+                        sliders.scale_start.setsliderfromval(scale_start);
+                        sliders.scale_end.setsliderfromval(scale_end);
+                        sliders.rotation_start.setsliderfromval(rotation_start);
+                        sliders.opacity_start.setsliderfromval(opacity_start);
+                        sliders.opacity_end.setsliderfromval(opacity_end);
+                        sliders.delay_radius.setsliderfromval(delay_radius);
+                        sliders.duration_radius.setsliderfromval(duration_radius);
+                        sliders.delay_transform.setsliderfromval(delay_transform);
+                        sliders.duration_transform.setsliderfromval(duration_transform);
+                        sliders.crush_arcs.setsliderfromval(crush_arcs);
+                        piechart.display_dynamic_2();
+                        
+                        d3.event.stopPropagation();
+                    });
+                //--------------------------------------------------
+                buttontranslatepos += buttonxseparation;
+                buttoncount++;
+                var button = g_testcontrols_svg
+                    .append("g")
+                    .attr("transform", "translate(" + buttontranslatepos + "," + ypos + ")")
+                    ;
+                button
+                    .append("rect")
+                    .attr("width", "60px")
+                    .attr("height", "30px")
+                    .attr("x", "-3px")
+                    .attr("y", "-15px")
+                    .attr("fill", "rgba(0,0,0, .3)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .append("text")
+                    .text("preset " + buttoncount)
+                    .style("fill", "rgba(255,255,255, 1)")
+                    .style("cursor", "pointer")
+                    ;
+                button
+                    .on("click", function() {
+
+                        d_radius_inner = -32.21;
+                        d_radius_outer = 104.71;
+                        rotation_start = -10.00;
+                        scale_start = 0.10;
+                        scale_end = 1;
+                        opacity_start = 0.10;
+                        opacity_end = 1;
+                        delay_radius = 0;
+                        duration_radius = 0.00;
+                        delay_transform = 0;
+                        duration_transform = 694.12;
+                        crush_arcs = 0;
+
+                                                
+                        rotation_end = 0;
+
+                        sliders.radius_inner.setsliderfromval(d_radius_inner);
+                        sliders.radius_outer.setsliderfromval(d_radius_outer);
+                        sliders.scale_start.setsliderfromval(scale_start);
+                        sliders.scale_end.setsliderfromval(scale_end);
+                        sliders.rotation_start.setsliderfromval(rotation_start);
+                        sliders.opacity_start.setsliderfromval(opacity_start);
+                        sliders.opacity_end.setsliderfromval(opacity_end);
+                        sliders.delay_radius.setsliderfromval(delay_radius);
+                        sliders.duration_radius.setsliderfromval(duration_radius);
+                        sliders.delay_transform.setsliderfromval(delay_transform);
+                        sliders.duration_transform.setsliderfromval(duration_transform);
+                        sliders.crush_arcs.setsliderfromval(crush_arcs);
+                        piechart.display_dynamic_2();
+                        
+                        d3.event.stopPropagation();
+                    });
             }
 
         }
@@ -1547,7 +1742,7 @@
 
 </head>
 <body style="margin-top:80px;">
-    <div id="report_container" style="text-align:left; "></div>
+    <div id="report_container" style="text-align:center; "></div>
     <div id="id_generic_slider" style="display:inline-block; "></div>
     <script>
         var file_url = "{{ hitsByCategoryFile.href }}" + "?redirect=proxy";

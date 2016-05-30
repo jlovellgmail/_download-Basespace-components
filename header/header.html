@@ -130,7 +130,7 @@
 
 
 
-<a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/dashboard" target="_self" class="ng-binding ng-scope" href="#">Dashboard_TEST</a>
+<a ng-if="!globalHeaderSecondaryListItems.hasOwnProperty(li.id)" ng-href="/dashboard" target="_self" class="ng-binding ng-scope" href="#">Dashboard</a>
 
 
 
@@ -235,6 +235,10 @@ $(document).ready(function(){
 		e.mouseleave(function(){
 			$("#navbar-menu-item-marker").css("left", $(".active").position().left+"px");
 			$("#navbar-menu-item-marker").css("width", $(".active").width()+"px");
+		});
+		e.click(function(){
+			$(".active").removeClass("active");
+			e.addClass("active");
 		});
 	});
 });

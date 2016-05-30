@@ -240,6 +240,9 @@ $(document).ready(function(){
 			$(".active").removeClass("active");
 			e.addClass("active");
 		});
+		// set the width statically to its current width so they don't move when the text changes to bold
+		// add two pixels or else "public data" breaks to next line when becomes bold
+		e.css("width", e.width()+2+"px");
 	});
 });
 </script>

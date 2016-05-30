@@ -27,10 +27,6 @@
 <style>
 	/* it's stalling before finally disappearing behind active marker when page is fully loaded, so hide it until it's in position */
 	#navbar-menu-item-marker {
-		/*
-		left: 191.812px !important;
-		width: 107px !important;
-		*/
 		visibility: hidden;
 	}
 </style>
@@ -47,10 +43,8 @@
 </head>
 <body>
 
+
 <!-- JL -->
-<!--
-<bs-global-header class="ng-isolate-scope">
--->
 <bs-global-header class="ng-isolate-scope" style="min-height:0px;">
 
 
@@ -65,60 +59,6 @@
 
 
 	<!-- JL -->
-	<!--
-	<div class="product-lens sh">
-		<div class="el-1"></div>
-		<div class="el-2"></div>
-		<div class="el-3"></div>
-		<div class="el-4"></div>
-		<div class="el-5"></div>
-		<div class="el-6"></div>
-	</div>
-	<ul class="nav navbar-nav product-dropdown">
-		<li class="dropdown">
-			<a class="dropdown-toggle product-button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="product-name"><span ng-bind-html="currentSite.title" class="ng-binding">Sequence<br> Hub</span><span class="fa fa-angle-down fa-lg"></span></span></a>
-			<ul class="dropdown-menu dropdown-menu-left product-links">
-				
-				<!-- ngRepeat: site in dropdownSites - ->
-				
-				<li class="product-item ng-scope" ng-repeat="site in dropdownSites">
-					<a ng-href="https://www.nextbio.com/b/nextbio.nb" href="https://www.nextbio.com/b/nextbio.nb">
-						<div class="product-lens ce">
-							<div class="el-1">
-							</div>
-							<div class="el-2">
-							</div>
-							<div class="el-3"></div>
-							<div class="el-4"></div>
-							<div class="el-5"></div>
-							<div class="el-6"></div>
-						</div>
-						<span class="product-name ce" ng-bind-html="site.title">Correlation<br> Engine</span>
-					</a>
-				</li>
-				
-				<!-- end ngRepeat: site in dropdownSites - ->
-				
-				<li class="product-item ng-scope" ng-repeat="site in dropdownSites">
-					<a ng-href="http://designstudio.illumina.com/" href="http://designstudio.illumina.com/">
-						<div class="product-lens ad">
-							<div class="el-1"></div>
-							<div class="el-2"></div>
-							<div class="el-3"></div>
-							<div class="el-4"></div>
-							<div class="el-5"></div>
-							<div class="el-6"></div>
-						</div>
-						<span class="product-name ad" ng-bind-html="site.title">Design<br> Studio</span>
-					</a>
-				</li>
-				
-				<!-- end ngRepeat: site in dropdownSites - ->
-
-			</ul>
-		</li>
-	</ul>
-	-->
 	<style>
 		.JL-spacer {
 			background-color: rgba(0,0,0, .2);
@@ -332,7 +272,6 @@ $(document).ready(function(){
 
 
 <!-- JL -->
-<!-- <li><a href="https://my.illumina.com/" target="_self">MyIllumina Dashboard</a></li> -->
 <li><a href="https://my.illumina.com/" target="_self">My Dashboard</a></li>
 
 

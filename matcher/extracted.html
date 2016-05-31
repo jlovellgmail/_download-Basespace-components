@@ -1,0 +1,105 @@
+<bs-drag-spreadsheet matrix="manager.confirmedMatrix" class="bs-drag-spreadsheet ng-isolate-scope" is-tray-visible="isTrayVisible" is-resource-link-enabled="isReadOnly">
+    <div class="dragdrop-empty-container" ng-init="isTrayExpanded = false" ng-class="{ &#39;tray-expanded&#39; : isTrayExpanded }">
+        <!-- ngRepeat: column in matrix.columns track by $index -->
+        <div ng-repeat="column in matrix.columns track by $index" style="height:100%" class="col-xs-6" ng-init="initDragDropOptions($index, 0)">
+            <div class="dragdrop-empty-droparea ng-isolate-scope ng-hide first even" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle, &#39;targeted&#39;: matrix.targetedCells[$index][0]}" ng-show="!column.isLocked &amp;&amp; column.nonEmptyItems.length == 0" bs-droppable="" drop-options="dropOptionsMatrix[$index][0]" drop-group="matrix">
+                <div class="dragdrop-empty-message">
+                    Drag and drop
+                    <br>items here
+                </div>
+                <div class="drag-mask" style="display:none;position:absolute;opacity:0.1;background-color: white;z-index:1000;top:0;left:0;width:100%;height:100%"></div>
+            </div>
+        </div>
+        <!-- end ngRepeat: column in matrix.columns track by $index -->
+        <div ng-repeat="column in matrix.columns track by $index" style="height:100%" class="col-xs-6" ng-init="initDragDropOptions($index, 0)">
+            <div class="dragdrop-empty-droparea ng-isolate-scope ng-hide last odd" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle, &#39;targeted&#39;: matrix.targetedCells[$index][0]}" ng-show="!column.isLocked &amp;&amp; column.nonEmptyItems.length == 0" bs-droppable="" drop-options="dropOptionsMatrix[$index][0]" drop-group="matrix">
+                <div class="dragdrop-empty-message">
+                    Drag and drop
+                    <br>items here
+                </div>
+                <div class="drag-mask" style="display:none;position:absolute;opacity:0.1;background-color: white;z-index:1000;top:0;left:0;width:100%;height:100%"></div>
+            </div>
+        </div>
+        <!-- end ngRepeat: column in matrix.columns track by $index -->
+    </div>
+    <div class="row bs-drag-spreadsheet-container" ng-class="{ &#39;tray-expanded&#39; : isTrayExpanded }" ng-click="clickSpreadsheet()" tabindex="1" ng-keyup="onKeyUp($event)">
+        <header>
+            <div class="col-count"></div>
+            <div class="col-content">
+                <!-- ngRepeat: column in matrix.columns -->
+                <div ng-repeat="column in matrix.columns" class="col-xs-6 first even" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle}">
+                    <div class="bs-matrix-col-header" ng-class="{ &#39;with-actions&#39; : !column.isLocked &amp;&amp; column.nonEmptyItems.length &gt; 0 }">
+                        <h5 class="bs-section-heading ng-binding">
+                            Pool A Samples
+                            <div class="label label-default bs-chooser-badge ng-binding" style="display:none">0</div>
+                        </h5>
+                        <!-- ngIf: !column.isLocked && column.nonEmptyItems.length > 0 -->
+                    </div>
+                </div>
+                <!-- end ngRepeat: column in matrix.columns -->
+                <div ng-repeat="column in matrix.columns" class="col-xs-6 last odd" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle}">
+                    <div class="bs-matrix-col-header" ng-class="{ &#39;with-actions&#39; : !column.isLocked &amp;&amp; column.nonEmptyItems.length &gt; 0 }">
+                        <h5 class="bs-section-heading ng-binding">
+                            Pool B Samples
+                            <div class="label label-default bs-chooser-badge ng-binding" style="display:none">0</div>
+                        </h5>
+                        <!-- ngIf: !column.isLocked && column.nonEmptyItems.length > 0 -->
+                    </div>
+                </div>
+                <!-- end ngRepeat: column in matrix.columns -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <div class="bs-spreadsheet-body">
+            <div class="col-count" ng-show="matrix.columns[0].isLocked || matrix.nonEmptyItems.length &gt; 0">
+                <!-- ngRepeat: row in getRowCount() track by $index -->
+            </div>
+            <div class="col-content">
+                <!-- ngRepeat: column in matrix.columns -->
+                <div ng-repeat="column in matrix.columns" class="col-xs-6 first even" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle}">
+                    <div class="bs-matrix-col-body">
+                        <ul ng-show="column.isLocked || column.nonEmptyItems.length &gt; 0" class="">
+                            <!-- ngRepeat: item in column.items track by $index -->
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- end ngRepeat: column in matrix.columns -->
+                <div ng-repeat="column in matrix.columns" class="col-xs-6 last odd" ng-class="{ first: $first, last: $last, even:$even, odd:$odd, middle:$middle}">
+                    <div class="bs-matrix-col-body">
+                        <ul ng-show="column.isLocked || column.nonEmptyItems.length &gt; 0" class="">
+                            <!-- ngRepeat: item in column.items track by $index -->
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- end ngRepeat: column in matrix.columns -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <footer>
+            <bs-tray ng-show="isTrayVisible" attachment="bottom" is-expanded="isTrayExpanded" messages="matrix.errors" status-summary="matrix.statusSummary" on-click-read-more="onClickReadMore" on-mouse-enter-read-more="onMouseEnterReadMore" on-mouse-leave-read-more="onMouseLeaveReadMore" class="ng-isolate-scope">
+                <div class="bs-tray bottom ng-hide" ng-class="{ &#39;bottom&#39; : attachment == &#39;bottom&#39; }" ng-show="statusSummary.message">
+                    <p ng-class="{ &#39;warning&#39; : statusSummary.type == bs.Common.Interfaces.MessageType[2] }" class="ng-binding">
+                        <!-- ngIf: statusSummary.type == 4 -->
+                        <!-- ngIf: statusSummary.type == 2 -->
+                        <!-- ngIf: statusSummary.type == 1 -->
+                        <span ng-if="statusSummary.type == 1" class="ng-scope">✓</span>
+                        <!-- end ngIf: statusSummary.type == 1 -->
+                        <a ng-show="messages.length &gt; 0" href="https://basespace.illumina.com/apps/1855854/start#" class="bs-tray-toggle ng-hide" ng-click="$event.preventDefault();toggleTray();">
+                            <span ng-show="isExpanded" class="ng-hide">Hide</span>
+                            <span ng-show="!isExpanded" class="">Show</span>
+                        </a>
+                    </p>
+                    <div class="bs-tray-content" ng-class="{ &#39;expanded&#39; : isExpanded }">
+                        <ul class="ng-scope">
+                            <!-- ngRepeat: message in messages track by $index -->
+                        </ul>
+                    </div>
+                </div>
+            </bs-tray>
+        </footer>
+    </div>
+</bs-drag-spreadsheet>

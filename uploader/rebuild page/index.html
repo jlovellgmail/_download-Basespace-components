@@ -1,54 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		html {
-			height: 100%;
-		}
-		body {
-			background: linear-gradient(120deg,#d0d5dd 0,#f6f7f8 52%,#d0d5dd 100%);
-			padding: 30px;
-			height: auto;
-		}
-		.container {
-			background-color: white;
-			height: 500px;
-			padding: 20px;
-		}
-		.dottedbox {
-		    border-radius: 6px;
-			border: 2px dashed rgba(0,0,0,0.25);
-			height: 100%;
-		}
-		.info {
-			padding-left: 8px;
-			padding-top: 12px;
-			font-family: sans-serif;
-			color: rgba(0,0,0,0.8);
-		    font-weight: 900;
-		    font-size: 13.5px;
-			margin-left: 10px;
-			letter-spacing: -0.5px;
-		}
-		.info ul {
-			font-size: 12px;
-			padding: 0;
-			padding-left: 16px;
-			margin-top: 3px;
-			font-weight: lighter;
-		}
-		.info ul li {
-			padding-left: 0;
-
-		}
-		.li-text {
-			position: relative;
-			left: -3px;
-			font-weight: lighter;
-			letter-spacing: normal;
-			font-size: 13px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
 </head>
 <body>
 	<div class="container">
@@ -59,8 +12,16 @@
 					<li><span class="li-text">Maximum of 16 files at a time</span></li>
 					<li><span class="li-text">Maximum of 25 Gb at a time</span></li>
 					<li><span class="li-text">One sample at a time</span></li>
-					<li><span class="li-text">FASTQ Files must adhere to the Illumina standard</span></li>
+					<li><span class="li-text">FASTQ Files must adhere to the <a href="#">Illumina standard</a></span></li>
 				</ul>
+			</div>
+			<div class="initialsignagecontainer">
+				<span class="heading">Drag and Drop</span> or <a href="#">Select Files</a>
+				<div class="cardscontainer">
+					<div class="card">
+						<img src="images/fastq.png">
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

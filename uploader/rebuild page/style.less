@@ -7,6 +7,10 @@ body {
 	height: auto;
 	font-family: sans-serif;
 }
+a {
+	color: rgb(50, 142, 209);
+	text-decoration: none;
+}
 .container {
 	background-color: rgba(255,255,255, .85);
 	padding: 20px;
@@ -41,19 +45,15 @@ body {
 			color: rgba(0,0,0, .5);
 		}
 	}
-}
-.li-text {
-	position: relative;
-	left: -3px;
-	font-weight: lighter;
-	letter-spacing: normal;
-	font-size: 13px;
-	color: rgba(0,0,0, .5);
-	line-height: 17px;
-}
-a {
-	color: rgb(50, 142, 209);
-	text-decoration: none;
+	.li-text {
+		position: relative;
+		left: -3px;
+		font-weight: lighter;
+		letter-spacing: normal;
+		font-size: 13px;
+		color: rgba(0,0,0, .5);
+		line-height: 17px;
+	}
 }
 .initialsignagecontainer {
 	margin-top: 160px;
@@ -61,35 +61,72 @@ a {
 	font-size: 21px;
     color: rgba(0,0,0,0.3);
     letter-spacing: -0.5px;
+    display: inline-block;
     .heading {
 		font-size: 21px;
 	    font-weight: 900;
 	    color: rgba(0,0,0,0.5);
 	    letter-spacing: -0.5px;
     }
-}
-.cardscontainer {
-
-}
-.card {
-	image-rendering: crisp-edges;
-	border-radius: 3px;
-	background: rgba(0,0,0,0.1);
-	padding: 20px;
-	text-align: left;
-	display: inline-block;
-	
-	/*
-	width: 207px;
-	height: 142px;
-	*/
-	width: 187px;
-	height: 112px;
-
-	padding-left: 21px;
-	padding-top: 16px;
-	img {
-		width: 45px;
-		opacity: .6;
-	}
+    .bigline {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    	margin-top: 10px;
+    	margin-bottom: 10px;
+    	width: 101%;
+    	/* left: 1%; */
+    	margin-left: -.5%;
+    }
+    .cardscontainer {
+    }
+    .card {
+    	image-rendering: crisp-edges;
+    	border-radius: 3px;
+    	background: rgba(0,0,0,0.1);
+    	padding: 20px;
+    	text-align: left;
+    	display: inline-block;
+    	width: 160px;
+    	height: 112px;
+    	padding-left: 21px;
+    	padding-top: 16px;
+    	color: rgba(0, 0, 0, 0.521569);
+    	img {
+    		width: 40px;
+    		opacity: .5;
+    		display: inline-block;
+    	}
+    	.headline {
+    		font-size: 21px;
+    		margin-bottom: 6px;
+    		font-weight: bold;
+    		color: rgba(0,0,0,0.5);
+    	}
+    	.horizontal-line {
+    		height: 1px;
+    		border-bottom: 1px solid rgba(0,0,0,0.2);
+    		position: relative;
+    		width: 163px;
+    		left: -3px;
+    		margin-top: -3px;
+    	}
+    	.below {
+    		margin-top: 10px;
+    		.text {
+    			display: inline-block;
+    		    font-size: 12px;
+    		    vertical-align: top;
+    		    letter-spacing: normal;
+    	        margin-left: 4px;
+    	        .filetypeextension-group {
+    	        	margin-top: 2px;
+    		        left: -2px;
+    		        position: relative;
+    	        }
+    			.filetypeextension {
+    				font-size: 19px;
+    				margin-bottom: -1px;
+    			}
+    		}
+    	}
+    }    
 }
